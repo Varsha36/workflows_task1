@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f0f2f5;
+}
+
+.main-container {
+    background: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    width: 600px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Horizontal Workflow Layout */
+.workflow-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styling */
+.wf-step {
+    flex: 1;
+    padding: 15px 5px;
+    border: 1px solid #ccc;
+    background-color: white; /* Default white */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Highlighted state in Orange */
+.wf-step.active {
+    background-color: orange;
+    color: white;
+    border-color: darkorange;
+}
+
+.radio-group label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 10px 25px;
+    cursor: pointer;
+    background: #e1e1e1;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.action-btn:hover {
+    background: #d1d1d1;
+}
