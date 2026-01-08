@@ -2,39 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workflow Task</title>
+    <title>Workflow Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="main-container">
-        <div class="section">
-            <h3>Roles</h3>
-            <div class="radio-group">
-                <label><input type="radio" name="role" value="Planner" checked> Planner</label>
-                <label><input type="radio" name="role" value="Designer"> Designer</label>
-                <label><input type="radio" name="role" value="Manufacturer"> Manufacturer</label>
-                <label><input type="radio" name="role" value="Delivery Manager"> Delivery Manager</label>
-            </div>
-        </div>
+<div class="main-wrapper">
+    <h1 class="main-title">Workflow</h1>
 
-        <div class="section">
-            <h3>Workflow</h3>
-            <div class="workflow-container">
-                <button id="btn-0" class="wf-step active">Plan</button>
-                <button id="btn-1" class="wf-step">Design</button>
-                <button id="btn-2" class="wf-step">Execute</button>
-                <button id="btn-3" class="wf-step">Deliver</button>
-            </div>
-        </div>
-
-        <div class="controls">
-            <button class="action-btn" onclick="handleWorkflow('promote')">Promote</button>
-            <button class="action-btn" onclick="handleWorkflow('demote')">Demote</button>
-        </div>
+    <div class="workflow-diagram">
+        <div id="state-0" class="state-box active">Plan</div>
+        <div class="arrow">↔</div>
+        <div id="state-1" class="state-box">Design</div>
+        <div class="arrow">↔</div>
+        <div id="state-2" class="state-box">Execute</div>
+        <div class="arrow">↔</div>
+        <div id="state-3" class="state-box">Deliver</div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="action-container">
+        <button class="control-btn" onclick="move('promote')">Promote</button>
+        <button class="control-btn" onclick="move('demote')">Demote</button>
+    </div>
+    <p class="description">Promote Highlights next button in the flow and demote makes previous button in the flow </p>
+
+    <div class="roles-container">
+        <h2 class="roles-header">Roles</h2>
+        <div class="role-option">
+            <input type="radio" id="planner" name="role" value="Planner" checked>
+            <label for="planner">Planner</label>
+        </div>
+        <div class="role-option">
+            <input type="radio" id="designer" name="role" value="Designer">
+            <label for="designer">Designer</label>
+        </div>
+        <div class="role-option">
+            <input type="radio" id="manufacturer" name="role" value="Manufacturer">
+            <label for="manufacturer">Manufacturer</label>
+        </div>
+        <div class="role-option">
+            <input type="radio" id="delivery" name="role" value="Delivery Manager">
+            <label for="delivery">Delivery Manager</label>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
